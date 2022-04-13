@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:teatcher_project/student_profile.dart';
-import 'package:teatcher_project/students_details2.dart';
+import 'package:teatcher_project/students_details.dart';
 
-class Student_Details extends StatelessWidget {
-  const Student_Details({Key? key}) : super(key: key);
+class StudentTabs extends StatelessWidget {
+  const StudentTabs({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +60,7 @@ class Student_Details extends StatelessWidget {
         body:  TabBarView(
           children: [
             Student_Profile(),
-            Student_Details2(),
+            StudentDetails(),
           ],
         ),
       ),

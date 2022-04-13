@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:teatcher_project/home_page.dart';
-import 'package:teatcher_project/students_details2.dart';
-import 'package:teatcher_project/studet_details.dart';
+import 'package:teatcher_project/students_details.dart';
+import 'package:teatcher_project/studet_tabs.dart';
 
 void main() {
   runApp(const MyApp());

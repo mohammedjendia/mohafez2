@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:teatcher_project/students_screen.dart';
+import 'package:teatcher_project/student_of_teacher.dart';
 
 class Home_page extends StatelessWidget {
   const Home_page({Key? key}) : super(key: key);
@@ -12,95 +12,97 @@ class Home_page extends StatelessWidget {
         title: Text('محمد جندية'),
       ),
       drawer: Drawer(
-
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Align(
+              alignment: AlignmentDirectional.center,
+              child: UserAccountsDrawerHeader(
+                decoration: const BoxDecoration(
+                  color: Colors.green,
+                ),
+                otherAccountsPicturesSize: Size(400, 100),
+                currentAccountPicture:
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    CircleAvatar(
+                      backgroundImage :AssetImage("assets/images/eye.png",
+                      ),
+                      radius: 30,
 
+                      ),
 
-       UserAccountsDrawerHeader(
+                  ],
+                ),
 
-         decoration:  BoxDecoration(
-          color: Colors.green,
+                accountName: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'mnfn2000@gmail.com',
+                      style: TextStyle(
+                          color: Theme.of(context).colorScheme.onPrimary),
+                    ),
+                  ],
+                ),
+                accountEmail: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.phone,
+                      color: Colors.white,
+                    ),
+                    Text(
+                      '0598611510 ',
+                      style: TextStyle(
+                          color: Theme.of(context).colorScheme.onPrimary),
+                    ),
+                  ],
+                ),
 
-         ),
-        currentAccountPicture: Center(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: const [
-              Image(image:AssetImage('assets/images/Mask.png') ,),
-            ],
-          ),
-        ) ,
-
-         accountName: Row(
-           mainAxisAlignment: MainAxisAlignment.center,
-           children: [
-             Text(
-               'mnfn2000@gmail.com',style:  TextStyle(
-                 color: Theme.of(context).colorScheme.onPrimary),
-
-             ),
-
-           ],
-         ),
-        accountEmail: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(Icons.phone , color: Colors.white,),
-            Text(
-            '0598611510 '
-              ,style: TextStyle(
-                  color: Theme.of(context).colorScheme.onPrimary),
+                // const UserAccountsDrawerHeader(
+                //   currentAccountPicture: CircleAvatar(
+                //     backgroundImage : AssetImage('assets/images/Mask.png'),
+                //     //AssetImage("assets/images/Mask.png"),
+                //   ),
+                //   accountName: Text('mnfn2000@gmail.com '),
+                //   accountEmail: Text('0598611510'),
+                // // ),
+              ),
             ),
-
-          ],
-        ),
-
-            // const UserAccountsDrawerHeader(
-            //   currentAccountPicture: CircleAvatar(
-            //     backgroundImage : AssetImage('assets/images/Mask.png'),
-            //     //AssetImage("assets/images/Mask.png"),
-            //   ),
-            //   accountName: Text('mnfn2000@gmail.com '),
-            //   accountEmail: Text('0598611510'),
-            // // ),
-
-       ),
-            ListTile (
-              title: Text('الطلاب') ,
+            ListTile(
+              title: Text('الطلاب'),
               leading: Icon(Icons.person),
-
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>Students_Screen()));
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => StudentOfTeacher()));
               },
             ),
             ListTile(
-              title: Text('إستعراض درجات الطلاب') ,
+              title: Text('إستعراض درجات الطلاب'),
               leading: Icon(Icons.grade),
-              onTap: (){},
+              onTap: () {},
             ),
             ListTile(
-              title: Text('طباعة تقرير عن الطالب') ,
+              title: Text('طباعة تقرير عن الطالب'),
               leading: Icon(Icons.print),
-              onTap: (){},
+              onTap: () {},
             ),
             ListTile(
-              title: Text('الأنشطة والدورات') ,
+              title: Text('الأنشطة والدورات'),
               leading: Icon(Icons.local_activity),
-              onTap: (){},
+              onTap: () {},
             ),
           ],
         ),
       ),
-        body: Directionality(
+      body: Directionality(
         textDirection: TextDirection.rtl,
         child: Column(
-          children: [
-
-          ],
+          children: [],
         ),
-        ),
+      ),
     );
-
   }
 }

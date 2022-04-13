@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:teatcher_project/sons_models.dart';
-import 'package:teatcher_project/studet_details.dart';
+import 'package:teatcher_project/studet_tabs.dart';
 
-class Students_Screen extends StatelessWidget {
-  const Students_Screen({Key? key}) : super(key: key);
+class StudentOfTeacher extends StatelessWidget {
+  const StudentOfTeacher({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -105,7 +105,7 @@ class Students_Screen extends StatelessWidget {
           ),
           GestureDetector(
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>Student_Details()));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>StudentTabs()));
 
             },
             child: ListView.separated(
@@ -151,8 +151,8 @@ class Students_Screen extends StatelessWidget {
                   ),
                 ],
                 image: const DecorationImage(
-                  image: AssetImage('assets/images/Mask.png'),
-                  //fit: BoxFit.cover,
+                  image: AssetImage('assets/images/eye.png'),
+                  fit: BoxFit.cover,
                 ),
               ),
 

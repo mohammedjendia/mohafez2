@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Student_Details2 extends StatefulWidget {
+class StudentDetails extends StatefulWidget {
 
   @override
-  State<Student_Details2> createState() => _Student_Details2State();
+  State<StudentDetails> createState() => _StudentDetailsState();
 }
 enum RecordAttendance { Presence, Absence }
 
-class _Student_Details2State extends State<Student_Details2> {
+class _StudentDetailsState extends State<StudentDetails> {
 
   RecordAttendance? attendance = RecordAttendance.Presence;
 
@@ -62,12 +62,12 @@ class _Student_Details2State extends State<Student_Details2> {
                 ),
               ),
 
-
             ),
             Expanded(
               flex: 3,
               child: Column(
                 children: [
+
                   ListTile(
                     title: const Text('حضور'),
                     leading: Radio<RecordAttendance>(
